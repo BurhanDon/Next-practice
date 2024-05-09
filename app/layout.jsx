@@ -1,5 +1,6 @@
 import "@styles/globals.css";
 import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 // import Provider from "@component/Provider";
 
 export const metadata = {
@@ -7,21 +8,25 @@ export const metadata = {
   description: "Discover & share AI prompts.",
 };
 
-const RootLayout = ({ children }) => {
+// name of this function & which name also has
+// to be exported is RootLayout no this.
+
+const Layout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <div className="main">
-          <div className="gradient" />
-        </div>
-        <main className="app">
-          <Nav />
-          {children}
-        </main>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
+          <main className="app">
+            <Nav />
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );
 };
 
-export default RootLayout;
-//Json config m se / hatao.
+export default Layout;

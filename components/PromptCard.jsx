@@ -1,5 +1,5 @@
-const comp = () => {
+const promptCard = () => {
     return <div></div>;
   };
-  export default comp;
+  export default promptCard;
   

@@ -1,5 +1,5 @@
-const comp = () => {
+const profile = () => {
     return <div></div>;
   };
-  export default comp;
+  export default profile;
   

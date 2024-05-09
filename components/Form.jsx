@@ -1,6 +1,6 @@
 sx
-const comp = () => {
+const Form = () => {
     return <div></div>;
   };
-  export default comp;
+  export default Form;
   
