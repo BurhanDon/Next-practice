@@ -30,7 +30,7 @@ const CreatePrompt = () => {
         router.push("/");
       }
     } catch (error) {
-      console.log(error);
+      console.log(error);//the prompt is not being saved in DB (Error).
     } finally {
       setSubmitting(false);
     }
