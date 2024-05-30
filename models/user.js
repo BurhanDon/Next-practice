@@ -2,7 +2,7 @@ import { Schema, model, models } from "mongoose";
 const usernameRegex =
   /^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
 
-const UserSchema = newSchema({
+const UserSchema = new Schema({
   email: {
     type: String,
     unique: [true, "Email already exists!"],
@@ -18,10 +18,10 @@ const UserSchema = newSchema({
   },
   image: {
     type: String,
-  },
+  }
 });
 
-// const User = models.User || model("User", UserSchema);
-const User = model("User", UserSchema);
+const User = models.User || model("User", UserSchema);
+// const User = model("User", UserSchema);
 
 export default User;

@@ -15,8 +15,9 @@ export const connectToDB = async () => {
       dbName: "share_prompt",
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 10000, // setted from my side
     });
-    isConnected(true);
+    isConnected = true;
     console.log("MonogDB is Connected.");
   } catch (error) {
     console.log(error);
